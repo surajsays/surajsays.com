@@ -1,42 +1,70 @@
-# sv
+# surajsays.com
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+My personal site and dev journal -built in public, broken often,written honestly.
 
-## Creating a project
+## Stack
+ 
+- [SvelteKit](https://kit.svelte.dev/) — framework
+- [mdsvex](https://mdsvex.pngwn.io/) — markdown support
+- [Tailwind CSS](https://tailwindcss.com/) + Typography plugin — styling
+- [@sveltejs/adapter-static](https://kit.svelte.dev/docs/adapter-static) — static site output
+- Hosted on Hostinger shared hosting
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
+## Structure
+ 
+```
+src/
+├── content/
+│   ├── blog/        # blog posts as .md files
+│   └── log/         # daily dev logs as .md files
+├── lib/
+│   └── assets/      # favicon and static assets
+└── routes/
+    ├── +layout.svelte   # global navbar and layout
+    ├── +layout.js       # prerender config
+    ├── +page.svelte     # homepage
+    ├── blog/
+    │   ├── +page.svelte         # lists all blog posts
+    │   └── [slug]/+page.svelte  # renders individual post
+    ├── log/
+    │   ├── +page.svelte         # lists all dev logs
+    │   └── [slug]/+page.svelte  # renders individual log
+    └── projects/
+        └── +page.svelte         # projects page
 ```
 
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv@0.12.7 create --template minimal --no-types --add tailwindcss="plugins:typography" sveltekit-adapter="adapter:static" mdsvex --install npm surajsays.com
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+## Development
+ 
+```bash
+# install dependencies
+npm install
+ 
+# start dev server
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
+ 
+# build for production
 npm run build
+ 
+# preview production build
+npm run preview
 ```
 
-You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## Writing
+ 
+Blog posts and logs live in `src/content/` as `.md` files with frontmatter:
+ 
+```md
+---
+title: My First Post
+date: 2026-03-14
+tags: [svelte, learning]
+---
+ 
+Content goes here...
+```
+
+## Deploy
+ 
+Build outputs to the `build/` folder. Upload contents to hosting  via FTP or File Manager.

@@ -1,2 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fraunces:ital,wght@0,300;0,600;1,300&display=swap');
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+
+:root {
+  --bg: #0c0c13;
+  border: #252836;
+  --accent: #e8943a;
+  --text: #cdd3de;
+  --muted: #5a6070;
+  --surface2: #1a1d28;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--text);
+}
+
+.nav-link.active {
+  color: var(--accent);
+}
