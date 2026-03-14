@@ -12,6 +12,13 @@
   --surface2: #1a1d28;
 }
 
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('/fonts/Inconsolata.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -31,4 +38,114 @@ body {
 
 .nav-link.active {
   color: var(--accent);
+}
+
+/* Terminal */
+.terminal {
+  background: var(--bg2, #13161e);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.terminal-bar {
+  background: var(--bg3, #1a1d28);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.terminal-bar .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-bar .dot.r {
+  background: #ff5f56;
+}
+
+.terminal-bar .dot.y {
+  background: #ffbd2e;
+}
+
+.terminal-bar .dot.g {
+  background: #27c93f;
+}
+
+.terminal-bar .title {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.terminal-body {
+  padding: 1.2rem 1.5rem;
+  font-size: 12.5px;
+  line-height: 2;
+}
+
+.terminal-body .line {
+  display: flex;
+  gap: 8px;
+}
+
+.ps1 {
+  color: var(--accent);
+}
+
+.cmd {
+  color: var(--text);
+}
+
+.out {
+  color: var(--muted);
+}
+
+.out.hi {
+  color: #5ec27a;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: var(--accent);
+  vertical-align: middle;
+  animation: blink 1.2s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Hero tags */
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 11px;
+  padding: 3px 10px;
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.hero-tag::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #5ec27a;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.arch-tag::before {
+  background: #1793d1;
 }
