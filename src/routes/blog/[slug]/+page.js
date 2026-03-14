@@ -1,5 +1,11 @@
 const posts = import.meta.glob('../../../content/blog/*.md', { eager: true });
 
+export function entries() {
+  return Object.keys(posts).map((path) => ({
+    slug: path.split('/').pop().replace('.md', '')
+  }));
+}
+
 export async function load({ params }) {
   const post = posts[`../../../content/blog/${params.slug}.md`];
 
