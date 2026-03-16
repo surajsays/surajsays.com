@@ -16,7 +16,7 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-<nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b"
+<nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b "
      style="background: rgba(10,10,10,0.85); border-color: var(--border);">
 
   <div class="flex items-center gap-8 px-6 py-4">
