@@ -28,15 +28,17 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
   flex: 1;
 }
 
-/* .prose>*:last-child { */
-/* margin-bottom: 0 !important; */
-/* } */
+.prose pre {
+  overflow-x: auto !important;
+  max-width: 100vw !important;
+}
 
 .nav-link {
   color: var(--muted);

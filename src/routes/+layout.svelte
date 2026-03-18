@@ -61,7 +61,7 @@
 
 </nav>
 
-<main class="prose prose-invert mx-auto px-4 pt-8 pb-0 mt-20">
+<main class="prose prose-invert mx-auto px-4 pt-8 pb-0 mt-20  ">
   {@render children()}
 
  </main>
