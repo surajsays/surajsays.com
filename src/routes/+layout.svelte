@@ -61,6 +61,17 @@
 
 </nav>
 
-<main class="prose prose-invert mx-auto px-4 py-8 mt-20">
+<main class="prose prose-invert mx-auto px-4 pt-8 pb-0 mt-20">
   {@render children()}
-</main>
+
+ </main>
+ <footer class="border-t mt-8 py-3 px-6 font-mono text-xs flex flex-col md:flex-row items-center justify-between gap-4"
+        style="border-color: var(--border); color: var(--muted);">
+
+  <span>built with <a href="https://svelte.dev" target="_blank" style="color: var(--accent);">svelte</a> — open source on <a href="https://github.com/surajsays/suraj.says" target="_blank" style="color: var(--accent);">github</a></span>
+
+<div class="flex gap-4">
+  <a href="https://github.com/surajsays" target="_blank" class="footer-link">~/github</a>
+  <a href="https://instagram.com/io.suraj" target="_blank" class="footer-link">~/instagram</a>
+</div>
+</footer>

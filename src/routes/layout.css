@@ -25,7 +25,18 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   line-height: 1.7;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+main {
+  flex: 1;
+}
+
+/* .prose>*:last-child { */
+/* margin-bottom: 0 !important; */
+/* } */
 
 .nav-link {
   color: var(--muted);
@@ -38,6 +49,16 @@ body {
 
 .nav-link.active {
   color: var(--accent);
+}
+
+.footer-link {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--text);
 }
 
 /* Terminal */
