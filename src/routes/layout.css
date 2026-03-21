@@ -2,14 +2,30 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
-
 :root {
-  --bg: #0c0c13;
-  border: #252836;
+  --bg: #0c0e13;
+  --bg2: #13161e;
+  --bg3: #1a1d28;
+  --border: #252836;
   --accent: #e8943a;
+  --accent2: #5b8dd9;
   --text: #cdd3de;
   --muted: #5a6070;
   --surface2: #1a1d28;
+  --nav-bg: rgba(10, 10, 10, 0.85);
+}
+
+:root.light {
+  --bg: #f5f5f0;
+  --bg2: #ebebE6;
+  --bg3: #e0e0db;
+  --border: #ddddd8;
+  --accent: #c97a2a;
+  --accent2: #3a6bc4;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --surface2: #e8e8e4;
+  --nav-bg: rgba(245, 245, 240, 0.85);
 }
 
 @font-face {
@@ -34,6 +50,9 @@ body {
 main {
   flex: 1;
 }
+
+
+
 
 .prose pre {
   overflow-x: auto !important;
